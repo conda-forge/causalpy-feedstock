@@ -20,6 +20,7 @@ requirements:
     - python >=3.8
   run:
     - arviz >=0.14.0
+    - ipython !=8.7.0
     - python-graphviz
     - matplotlib-base >=3.5.3
     - numpy
