@@ -1,5 +1,5 @@
 {% set name = "causalpy" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/CausalPy-{{ version }}.tar.gz
-  sha256: 8bea895f499987ae1aff910a9160bd4b90458a508a29220ab699ef8e67bcc70e
+  sha256: 8f849317b164e54c359a5a09dd414824660db6c0f921e905f0e9de7ced13f74c
 
 build:
   noarch: python
