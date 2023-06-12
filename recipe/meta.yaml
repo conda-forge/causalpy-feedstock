@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools >=61.0
   run:
     - arviz >=0.14.0
     - ipython !=8.7.0
@@ -26,7 +27,7 @@ requirements:
     - numpy
     - pandas
     - patsy
-    - pymc >=4.0.0
+    - pymc >=5.0.0
     - python >=3.8
     - scikit-learn >=1
     - scipy
