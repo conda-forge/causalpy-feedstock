@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.10
     - setuptools >=61.0
   run:
-    - python >=3.8
+    - python >=3.10
     - arviz >=0.14.0
     - python-graphviz
     - ipython !=8.7.0
