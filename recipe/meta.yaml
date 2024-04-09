@@ -1,5 +1,5 @@
 {% set name = "causalpy" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/CausalPy-{{ version }}.tar.gz
-  sha256: 4655109894a1eda2696420eb0da0ab03648f6f6cf250bdd11bebd7066a6a1229
+  sha256: 49a6f641600d04224d750c830404c820a2b8a8a7637366ca73b947d0d31c12f6
 
 build:
   noarch: python
@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.10
     - setuptools >=61.0
   run:
-    - python >=3.8
+    - python >=3.10
     - arviz >=0.14.0
     - python-graphviz
     - ipython !=8.7.0
