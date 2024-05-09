@@ -1,13 +1,13 @@
 {% set name = "causalpy" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/CausalPy-{{ version }}.tar.gz
-  sha256: 49a6f641600d04224d750c830404c820a2b8a8a7637366ca73b947d0d31c12f6
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 31cac47c2b61e9642e932e23f53ac0e1be263ceff4c6a30451ded180c041dd0d
 
 build:
   noarch: python
