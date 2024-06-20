@@ -25,7 +25,7 @@ requirements:
     - python-graphviz
     - ipython !=8.7.0
     - matplotlib-base >=3.5.3
-    - numpy <1.26.0
+    - numpy
     - pandas
     - patsy
     - pymc >=5.14.0
