@@ -1,27 +1,29 @@
-{% set python_min = "3.10" %}
-{% set name = "causalpy" %}
-{% set version = "0.5.0" %}
+schema_version: 1
+
+context:
+  name: causalpy
+  version: "0.5.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: 18959051eeb1b1047f81b2cbb6dcf1f2936709f7e2a4ccd8921e28362f640d43
 
 build:
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools >=61.0
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - arviz >=0.14.0
     - python-graphviz
     - ipython !=8.7.0
@@ -36,21 +38,19 @@ requirements:
     - statsmodels
     - xarray >=v2022.11.0
 
-test:
-  imports:
-    - causalpy
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - causalpy
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
-  home: https://github.com/pymc-labs/CausalPy
-  doc_url: https://causalpy.readthedocs.io/
   summary: Causal inference for quasi-experiments in Python
   license: Apache-2.0
   license_file: LICENSE
+  homepage: https://github.com/pymc-labs/CausalPy
+  documentation: https://causalpy.readthedocs.io/
 
 extra:
   recipe-maintainers:
