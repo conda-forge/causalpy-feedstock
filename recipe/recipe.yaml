@@ -45,7 +45,9 @@ tests:
       imports:
         - causalpy
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
 
 about:
   summary: Causal inference for quasi-experiments in Python
