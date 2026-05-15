@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: causalpy
-  version: "0.8.0"
+  version: "0.8.1"
   python_min: 3.11
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 1ad7d0e5fc1be75e1baff07aacb62bad5a864d2c3701b309370f14193546fd30
+  sha256: c3bed7cb736c33c970f3430900d2647af6e2962da31ba4e5cc31f21e0a0be578
 
 build:
   number: 0
