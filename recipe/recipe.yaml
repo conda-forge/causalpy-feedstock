@@ -25,7 +25,8 @@ requirements:
     - setuptools >=61.0
   run:
     - python >=${{ python_min }}
-    - arviz >=0.14.0
+    # Upstream did not pinned arvix<0.24 but this is needed due to breaking changes in newer arviz versions
+    - arviz >=0.14.0,<0.24.0
     - python-graphviz
     - ipython !=8.7.0
     - matplotlib-base >=3.5.3
